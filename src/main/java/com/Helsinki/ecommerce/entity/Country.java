@@ -2,15 +2,13 @@ package com.Helsinki.ecommerce.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.List;
 
 @Entity
-@Table(name="country")
-@Getter
-@Setter
+@Table(name = "country")
+@Data
 public class Country {
 
     @Id
@@ -26,5 +24,6 @@ public class Country {
 
     @OneToMany(mappedBy = "country")
     @JsonIgnore
-    private List<State> states;
+    private List<State> stateList;
+
 }

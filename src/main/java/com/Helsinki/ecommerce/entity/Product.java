@@ -10,8 +10,9 @@ import java.util.Date;
 
 @Entity
 @Table(name = "product")
-@Data
+@Data // lombok - auto-generates getters/setters behind the scenes..
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -37,7 +38,7 @@ public class Product {
     private String imageUrl;
 
     @Column(name = "active")
-    private boolean active;
+    private boolean isActive;
 
     @Column(name = "units_in_stock")
     private int unitsInStock;
@@ -49,5 +50,4 @@ public class Product {
     @Column(name = "last_updated")
     @UpdateTimestamp
     private Date lastUpdated;
-
 }

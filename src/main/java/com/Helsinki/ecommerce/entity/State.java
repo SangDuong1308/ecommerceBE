@@ -1,14 +1,15 @@
 package com.Helsinki.ecommerce.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Table(name = "state")
-@Getter
-@Setter
+@Data
 public class State {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
