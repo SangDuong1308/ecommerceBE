@@ -5,7 +5,6 @@ import com.Helsinki.ecommerce.dto.Purchase;
 import com.Helsinki.ecommerce.dto.PurchaseResponse;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin("*")
 @RestController
 @RequestMapping("/api/checkout")
 public class CheckoutController {
