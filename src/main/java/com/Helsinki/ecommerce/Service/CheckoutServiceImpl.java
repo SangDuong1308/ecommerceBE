@@ -17,6 +17,11 @@ public class CheckoutServiceImpl implements CheckoutService{
 
     private CustomerRepository customerRepository;
 
+//    public CheckoutServiceImpl(CustomerRepository customerRepository, @Value("${stripe.key.secret}") String secretKey) {
+//        this.customerRepository = customerRepository;
+//        Stripe.apiKey = secretKey;
+//    }
+
     public CheckoutServiceImpl(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
@@ -61,6 +66,11 @@ public class CheckoutServiceImpl implements CheckoutService{
         return new PurchaseResponse(orderTrackingNumber);
 
     }
+
+//    @Override
+//    public PaymentIntent createPaymentIntent(PaymentInfo paymentInfo) throws StripeException {
+//        return null;
+//    }
 
     private String generateOrderTrackingNumber() {
         //generate a random UUID number
